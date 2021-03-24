@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{535BA3EF-EB7F-4205-A270-F10B5FCD37F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessAccessLayer</RootNamespace>
+    <AssemblyName>BusinessAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\BL_AcademicYear.cs" />
+    <Compile Include="Admin\BL_AddHostelRoom.cs" />
+    <Compile Include="Admin\BL_AddQuestions.cs" />
+    <Compile Include="Admin\BL_AddTest.cs" />
+    <Compile Include="Admin\BL_Admission.cs" />
+    <Compile Include="Admin\BL_BatchAllotment.cs" />
+    <Compile Include="Admin\BL_Challanrec.cs" />
+    <Compile Include="Admin\BL_CountryStateDistrict.cs" />
+    <Compile Include="Admin\BL_Dashbord.cs" />
+    <Compile Include="Admin\BL_DeviceSetting.cs" />
+    <Compile Include="Admin\BL_DownloadAttDeviceData.cs" />
+    <Compile Include="Admin\BL_FeesCategory.cs" />
+    <Compile Include="Admin\BL_Holiday.cs" />
+    <Compile Include="Admin\BL_LC.cs" />
+    <Compile Include="Admin\BL_SendSMS.cs" />
+    <Compile Include="Admin\BL_TimeSlotMaster.cs" />
+    <Compile Include="Admin\BL_TimeTableCreation.cs" />
+    <Compile Include="Admin\BL_Transport.cs" />
+    <Compile Include="Admin\BL_Scheme.cs" />
+    <Compile Include="Admin\BL_Role.cs" />
+    <Compile Include="Admin\EWA_DashBord.cs" />
+    <Compile Include="Admin\EWA_DashBord_2.cs" />
+    <Compile Include="BL_ChangePassword.cs" />
+    <Compile Include="Faculty\BL_LeaveApplication.cs" />
+    <Compile Include="Faculty\BL_UploadResult.cs" />
+    <Compile Include="HR\BL_ChallanRecAdmin.cs" />
+    <Compile Include="HR\BL_LeaveStatus.cs" />
+    <Compile Include="HR\BL_SalarySettings.cs" />
+    <Compile Include="HR\BL_SetLeave.cs" />
+    <Compile Include="Inventory\BL_Category.cs" />
+    <Compile Include="Inventory\BL_Item.cs" />
+    <Compile Include="Inventory\BL_PurchaseOrder.cs" />
+    <Compile Include="Inventory\BL_QualityControl.cs" />
+    <Compile Include="Inventory\BL_StockView.cs" />
+    <Compile Include="Inventory\BL_Supplier.cs" />
+    <Compile Include="Inventory\BL_Unit.cs" />
+    <Compile Include="Library\BL_AddBook.cs" />
+    <Compile Include="Library\BL_AddBookGroup.cs" />
+    <Compile Include="Library\BL_IssueBook.cs" />
+    <Compile Include="Library\BL_ReturnBook.cs" />
+    <Compile Include="Reports\BL_CommonReports.cs" />
+    <Compile Include="SuperAdmin\BL_SportMaster.cs" />
+    <Compile Include="Faculty\BL_UploadDocument.cs" />
+    <Compile Include="HR\BL_EmpAssignSubject.cs" />
+    <Compile Include="Admin\BL_AssignDeptDes.cs" />
+    <Compile Include="Admin\BL_EmpStudAttendance.cs" />
+    <Compile Include="Admin\BL_Fees.cs" />
+    <Compile Include="Admin\BL_LeaveType.cs" />
+    <Compile Include="Admin\BL_Login.cs" />
+    <Compile Include="Admin\BL_PayFees.cs" />
+    <Compile Include="Admin\BL_Semester.cs" />
+    <Compile Include="Admin\BL_SendMessage.cs" />
+    <Compile Include="Admin\BL_WeekDay.cs" />
+    <Compile Include="Faculty\BL_ComposeMessage.cs" />
+    <Compile Include="HR\BL_Staff.cs" />
+    <Compile Include="Admin\BL_StaffView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Admin\BL_Student.cs" />
+    <Compile Include="Admin\BL_StudentView.cs" />
+    <Compile Include="Admin\BL_Subject.cs" />
+    <Compile Include="BL_Common.cs" />
+    <Compile Include="Faculty\BL_Faculty.cs" />
+    <Compile Include="Faculty\BL_Leave.cs" />
+    <Compile Include="Faculty\BL_Messages.cs" />
+    <Compile Include="Faculty\BL_StudentAttendance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin\BL_CasteCategory.cs" />
+    <Compile Include="Admin\BL_DepartmentDesignation.cs" />
+    <Compile Include="Admin\BL_Documents.cs" />
+    <Compile Include="Student\BL_StudentProfile.cs" />
+    <Compile Include="SuperAdmin\BL_SuperAdmin.cs" />
+    <Compile Include="Admin\BL_ProgramExecutive.cs" />
+    <Compile Include="SuperAdmin\BL_Trailset.cs" />
+    <Compile Include="SuperAdmin\BL_University.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccess.csproj">
+      <Project>{572522CB-3B79-421D-8B64-EB2796C6563B}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityWebApp\EntityWebApp.csproj">
+      <Project>{2FD7978D-4247-485F-BB96-96C9609B6024}</Project>
+      <Name>EntityWebApp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

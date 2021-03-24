@@ -1,0 +1,354 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="CMS.Forms.Admin.AdminHome" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link id="Link1" runat="server" rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon" />
+    <link id="Link2" runat="server" rel="icon" href="~/images/favicon.ico" type="image/ico" />
+    <title>Education Management System </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="../../css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/StyleSheet.css" rel="stylesheet" type="text/css" />
+             <link href="../../font-awesome.css" rel="stylesheet" />
+           <script type="text/javascript" src='https://kit.fontawesome.com/a076d05399.js'></script>
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function ReportOpen(url) {
+            var win = window.open(url, '_blank', 'menubar=no,width=750,height=750,scrollbars=yes,top=100,left=200');
+            win.focus();
+        }
+    </script>
+
+     <script type ="text/javascript">
+
+         window.onload = window.history.forward(0);
+
+</script>  
+    <style type="text/css">
+        .style1
+        {
+            width: 167px;   
+        }
+    </style>
+  
+</head>
+<body style="background-color: #444e59" ">
+    <form id="Form1" runat="server">
+    <div style="margin-top: 5px">
+        <br />
+&nbsp;<table align="center" width="1100px" style="background-color: White;">
+            <tr>
+                <td colspan="2">
+                    <div style="background-color: White">
+                        <!-- For Dynamic Content on Home Page  -->
+                        <div style="width: 1100px; height: 140px; border: medium double #0C7BFA;">
+                            <table style="width: 1100px" align="center">
+                                <tr>
+                                    <td height="30px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10px">
+                                    </td>
+                                    <td width="80px">
+                                        <asp:ImageButton ID="ImageButton_logo" runat="server" Height="100px" Width="125px"
+                                            ImageUrl="~/images/logo-big.png" PostBackUrl="~/Forms/Admin/Admin_Home.aspx"
+                                            CausesValidation="false" />
+                                    </td>
+                                    <td width="400px" align="left">
+                                        <table style="width: 100%" class="notranslate" align="left">
+                                            <tr>
+                                                <td style="font-size: 12px; color: Olive" align="left">
+                                                    <b>
+                                                        <asp:Label ID="Lbl_TrustName" runat="server" Text="LogicPro Solutions"></asp:Label></b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 20px; color: #1190F2;" align="left">
+                                                    <b>
+                                                        <asp:Label ID="lbl_CollegeName" runat="server" Width="500px" Font-Size="Larger" Text="LogicPro Solutions"></asp:Label></b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left">
+                                                    <asp:Label ID="lbl_CollegeAddress" runat="server" Text="Pimple Gurav ,Pune"></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table style="width: 90%;" cellspacing="10" class="notranslate">
+                                            <tr>
+                                                <td>
+                                                </td>
+                                                <td align="right">
+                                                    <asp:Label ID="lblWelcome" runat="server" Text="Welcome "></asp:Label>
+                                                    &nbsp;&nbsp;
+                                                    <asp:Label ID="lblUserType" runat="server" Text="Admin" Font-Bold="True" Font-Italic="False"
+                                                        Font-Names="Calibri" ForeColor="Black" Font-Size="14pt"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                </td>
+                                                <td align="right">
+                                                    <asp:Label ID="lblDate" runat="server" Text="" Font-Italic="true"></asp:Label>
+                                                    <asp:Label ID="lblBar1" runat="server" Text="  |  "></asp:Label>
+                                                    <asp:Label ID="lblSignas" runat="server" Text="Sign in As Admin"></asp:Label>
+                                                    <asp:Label ID="lblUserName" runat="server" Text="  |  "></asp:Label>
+                                                    <asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click" CausesValidation="False">Log Out</asp:LinkButton>
+                                                    <asp:Label ID="Label6" runat="server" Text="  |  "></asp:Label>
+                                                    <asp:ImageButton ID="ibtnHome" runat="server" ImageUrl="~/images/Home.png" Height="25px"
+                                                        Style="vertical-align: text-bottom;" Width="25px" PostBackUrl="~/Forms/Admin/Admin_Home.aspx"
+                                                        CausesValidation="false" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <table width="100%" align="right" class="notranslate">
+                            <tr>
+                                <td>
+                                    <!--Menu content-->
+                                    <div id='cssmenu'>
+                                       <%-- <ul>
+                                            <li><a href='#'><span>Home</span></a></li>
+                                            <li class='has-sub '><a href='#'><span>Event Gallery</span></a> </li>
+                                            <li><a href='#'><span>Blog</span></a></li>
+                                            <li><a href='#'><span>About us</span></a></li>
+                                            <li><a href='#'><span>Contact</span></a></li>
+                                        </ul>--%>
+                                        <%--<div style="text-align:right">
+                                            <%--<a href='https://www.youtube.com/watch?v=IGSLSvhUFFU' target="_blank"><span>Youtube Link</span></a>
+                                        </div>--%>
+                                    </div>
+                                    <!-- End Of Menu-->
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="min-height: 900px">
+                        <table>
+                            <tr>
+                                <td class="style1">
+                                    <div class="notranslate" style="min-height: 900px">
+                                        <div class="span2">
+                                            <!--Sidebar content-->
+                                            <ul class="nav nav-list">
+
+                                             
+                                                <li class="active"><a href="Admin_Home.aspx">   <span class="glyphicons glyphicons-sms">Home</span></a></li>
+                                                <li><a href="DashBord.aspx"><i class="icon-edit"></i>Dash Board</a></li> 
+                                               
+                                               
+
+                                                 <%--   <li><a href="AdmissionForm3.aspx"><i class="icon-edit"></i>Admission Form</a></li>--%>
+                           
+                                               
+                                                <li><a href="StudentAdmissionList.aspx"><i class="icon-edit"></i>Admission Status</a></li>
+                                                <li><a href="StudentList.aspx"><i class="icon-edit"></i>Student List</a></li>
+                                               <%-- <li><a href="../HR/AddStaff.aspx"><i class="icon-edit"></i>Add Staff</a></li>--%>
+                                                <li><a href="SearchFaculty.aspx"><i class="icon-edit"></i>Employee List</a></li>
+                                            <%--    <li><a href="UploadAttendance.aspx"><i class="icon-edit"></i>Upload Attendance</a></li>
+                                                <li><a href="DeviceSetting.aspx"><i class="icon-edit"></i>Device Settings</a></li>
+                                                <li><a href="GetAttDeveiceData.aspx"><i class="icon-edit"></i>Get Device Attendance</a></li>--%>
+                                         <%--       <li><a href="AddScheme.aspx"><i class="icon-edit"></i>Add Scheme Details</a></li>--%>
+                                                <%--  <li><a href=""><i class="icon-edit"></i>View Announcement</a></li>--%>
+                                            </ul>
+                                             <ul class="nav nav-list">
+                                                   <li class="active"><a href="#"><i class="icon-adjust icon-white "></i>Admission Completion</a></li>
+                                               
+                                                 <b> <li class="">Option-1 (Pay Fee First)</li></b>
+                                                <li><a href="GetAdmissionId_ForPendingStudents.aspx"><i class="icon-edit"></i>1:Get Admission</a></li>
+                                                <%--<li><a href="PayFees.aspx"><i class="icon-edit"></i>2: Pay Admission Fees</a></li>--%>
+                                                  <b> <li class="">Option-2 (Pay Fee Later )</li></b>
+                                                  <li><a href="ViewStudentAdmission.aspx"><i class="icon-edit"></i>2:Get Admission </a></li>
+                                                 
+                                                  
+                                             </ul>
+                                            <ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-bell icon-white "></i> About Current Year</a></li>
+                                  
+                                                <%-- <li><a href="StudentList.aspx"><i class="icon-edit"></i>1: Get Student Code</a></li>--%>
+                                                 <li><a href="PayInstallmentFees.aspx"><i class="icon-edit"></i>Pay Current Year Fee</a></li>
+                                                  <li><a href="ViewStudentFeesReport.aspx"><i class="icon-edit"></i>Current Year Report</a></li>
+                                                
+                                                
+<%--                                                 <li><a href="ViewStudentFeesDocInfo.aspx"><i class="icon-edit"></i>Fees Information</a></li>--%>
+                                            </ul>
+                                        
+                                                  <ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-bell icon-white"></i> About Prevoius year </a></li>
+                                                  
+                                               
+                                                   <li><a href="PayPreviousyearFees.aspx"><i class="icon-edit"></i>Pay Previous Year Fee</a></li>
+                                                    <li><a href="PreviousYearPendingFeeReport.aspx"><i class="icon-edit"></i>Previous Year Report</a></li>
+                                                  
+                                                  </ul>
+
+
+                                                <ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-inbox icon-white"></i>Announcement</a></li>
+                                                <li><a href="SendMessage.aspx"><i class="icon-edit"></i>Send SMS</a></li>
+                                                <li><a href="AdminCreateAnnouncement.aspx"><i class="icon-edit"></i>Create Announcement</a></li>
+                                                <li><a href="AdminViewAnnouncement.aspx"><i class="icon-edit"></i>View Announcement</a></li>
+                                            </ul>
+                                            
+                                                <ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-inbox icon-white"></i>Promote Student</a></li>
+                                                             <li><a href="NextAcademicYear.aspx"><i class="icon-edit"></i> Student-Without Due</a></li>
+                                                    <li><a href="NextAcademicYearSpecial.aspx"><i class="icon-edit"></i> Student-With Due</a></li>
+                                            </ul>
+                                            <%--  <ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-inbox icon-white"></i>Fees Configuration</a></li>
+                                              
+                                               <%--  <li><a href="ViewFees.aspx"><i class="icon-edit"></i>View Fees</a></li>
+                                                     
+                                            </ul>--%>
+
+                                            <ul class="nav nav-list">
+                                                <li class="active"><a href="" target="_blank"><i class="icon-user icon-white"></i>Student Configuration</a></li>
+                                          
+                                                   <li><a href="AcademicYear.aspx"><i class="icon-edit"></i>Add Academic Year</a></li>
+                                                <li><a href="ProgramExecutive.aspx"><i class="icon-edit"></i>Course/Branch/Class</a></li>
+                                                 <li><a href="CasteCategory.aspx"><i class="icon-edit"></i>Add Caste/Category</a></li>
+                                                 <li><a href="FeesCategory.aspx"><i class="icon-edit"></i>Add Fess Category</a></li>
+
+                                                 <%--<li><a href="Documents.aspx"><i class="icon-edit"></i>Set Documents List</a></li>--%>
+                                              </ul>    
+                                             <ul class="nav nav-list">
+                                                  <li class="active"><a href="#"><i class="icon-user icon-white"></i>Teacher Configuration</a></li>
+                                                   <li><a href="DepartmentDesignation.aspx"><i class="icon-edit"></i>Add Dept/Designation</a></li>
+                                                  <li><a href="AddStaff.aspx" ><i class="icon-edit"></i>Add Employee</a></li>
+                                                  <%--<li><a href="AddSemesterPattern.aspx"><i class="icon-edit"></i>Add Semester</a></li>--%>
+                                                <li><a href="AddSubject.aspx"><i class="icon-edit"></i>Add Subject</a></li>
+                                                 <li><a href="EmpAssignSubject.aspx"><i class="icon-edit"></i>Assign Subject</a></li>
+                                               <%-- <li><a href="SchemeMaster.aspx"><i class="icon-edit"></i>Scheme Master</a> </li>--%>
+                                                
+                                               
+                                               </ul>
+                                             <ul class="nav nav-list">
+                                                
+                                                  <li class="active"><a href="#"><i class="icon-home icon-white"></i>Other Configuration</a></li>
+<%--                                                <li><a href="BatchAllotment.aspx"><i class="icon-edit"></i>Batch Allotment</a></li>--%>
+                                                      <%-- <li><a href="TimeSlotMaster.aspx"><i class="icon-edit"></i>Time Slot Master</a></li>--%>
+                                               <li><a href="AddFees.aspx"><i class="icon-edit"></i>Add Fees</a></li>
+                                                   <li><a href="TimeTableCreation.aspx"><i class="icon-edit"></i>Create Time Table</a></li>
+                                                 <li><a href="AddHoliday.aspx"><i class="icon-edit"></i>Add Holiday</a></li>
+                                                  <li><a href="AddHostelRoom.aspx"><i class="icon-edit"></i>Add Hostel</a></li>
+                                                <%--<li><a href="Addroom1.aspx"><i class="icon-edit"></i>Add Room</a></li>--%>
+                                               <%-- <li><a href="HostelAdmission.aspx"><i class="icon-edit"></i>Hostel Admission</a></li>--%>
+                                                 <li><a href="CountryStateDist.aspx"><i class="icon-edit"></i>Country|State|District</a></li>
+                                               <li><a href="TransportDetails.aspx"><i class="icon-edit"></i>Transport Details</a></li>
+                                          
+                                               
+                                               
+                                            </ul>
+              
+                                            <%--<ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-home icon-white"></i>Master Settings</a></li>
+                                                <li><a href=""><i class="icon-book"></i>Authority</a></li>
+                                                <li><a href=""><i class=" icon-upload"></i>Manage Users</a></li>
+                                            </ul>--%>
+                                            <ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-certificate icon-white">
+                                                </i>Certificates</a></li>
+                                                <li><a href="StudentIcardGeneration.aspx"><i class="icon-book"></i>Student I-Card</a></li>
+                                                <li><a href="FacultyICardGeneration.aspx"><i class="icon-book"></i>Employee I-Card</a></li>
+                                                <%--<li><a href="College_Home.aspx"><i class="icon-edit"></i>Bonafied Certificate</a></li>--%>
+                                                <li><a href="LeavingCertificate.aspx"><i class="icon-certificate"></i>Leaving Certificate</a></li>
+                                                
+                                             <%--       <li><a href="backdatedlc.aspx"><i class="icon-edit"></i>Back Dated Leaving Certificate</a></li>--%>
+                                               <li><a href="Experienced_Certificate.aspx"><i class="icon-certificate"></i>Experience Certificate</a></li>
+                                               
+                                                 <li class="active"><a href="#"><i class="icon-file icon-white"></i>Reports</a></li>
+                                                 <li><a href="StudentAdmissionReport.aspx"><i class="icon-edit"></i>Student Admission </a></li>
+                                               <%-- <li><a href="ViewStudentFeesReport.aspx"><i class="icon-edit"></i>Student Fees Status</a></li>--%>
+                                                <li><a href="ViewStaffList.aspx"><i class="icon-edit"></i>Staff List</a></li>
+                                                <%--../../AllReports.aspx   StudentAdmissionReport.aspx--%>
+                                                <%--<li><a href="../../AllReports.aspx"><i class="icon-edit"></i>Student All Report</a></li>--%>
+                                                     <li><a href="../../StaffSalryReport.aspx"><i class="icon-edit"></i>Staff Salary</a></li>
+                                                   
+                                               <%-- <li><a href="../../FeesReports.aspx"><i class="icon-edit"></i>Student Fees Reports</a></li>--%>
+                                              <li><a href="HostelReport.aspx"><i class="icon-edit"></i>Hostel </a></li>
+                                            </ul>
+                                        
+                                            <ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-cog icon-white"></i>Other </a></li>
+                                                 <li><a href="AdminEditCollege.aspx" ><i class="icon-edit"></i>Edit School/College</a></li>
+                                                  <%--<li><a href="DeleteConfirmAdmission.aspx"><i class="icon-book"></i> Delete Student</a></li>--%>
+                                            <%--  <li><a href="../Employee Letter/Appointment.aspx"><i class="icon-book"></i>Appointment Letter</a></li>
+                                                <li><a href="../Employee Letter/Confirmation.aspx"><i class="icon-book"></i>Confirmation Letter</a></li>--%>
+
+                                                <li><a href="Role.aspx"><i class="icon-book"></i>Change Role</a></li>
+                                                <li><a href="AssignDeptDes.aspx"><i class="icon-book"></i>Assign Department </a>
+                                                <li><a href="ChangePassword.aspx"><i class="icon-book"></i>Reset Password</a></li>
+                                         
+                                                <li><asp:LinkButton ID="lbtnLogout1" runat="server" CausesValidation="false" OnClick="lbtnLogout1_Click"><i class="icon-off"></i>Logout</asp:LinkButton></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!--Content Place Holder  -->
+                                <td valign="top">
+                                    <div class="span10">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            <div style="height: Auto; width: 900px; border: double #0C7BFA">
+                                            </div>
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" class="notranslate">
+                        <tr>
+                            <td>
+                                <div style="background: #000000; background-repeat: repeat">
+                                    <table align="center">
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                All Rights Reserved 2016 @ LogicPro Solutions India Pvt.Ltd
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td align="center" style="font-size: 12px; color: White">
+                                                Website :<a href="http://logicprosol.com" target="_blank">
+                                               <%-- <a href="http://logicprosol.com" style="color:white">--%> <u style="color: #00FFFF">LogicPro Solutions India Pvt.Ltd</u></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                E-mail : Info@logicprosol.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                Contact : 8805537777
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

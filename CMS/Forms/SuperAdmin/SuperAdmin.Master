@@ -1,0 +1,238 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SuperAdmin.master.cs"
+    Inherits="CMS.Forms.SuperAdmin.SuperAdmin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link id="Link1" runat="server" rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon" />
+    <link id="Link2" runat="server" rel="icon" href="~/images/favicon.ico" type="image/ico" />
+    <title>Education Management System </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="../../css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/StyleSheet.css" rel="stylesheet" type="text/css" />
+         <script type="text/javascript">
+             var currentLink = null;
+             function changeLinkColor(link) {
+                 if (currentLink != null) {
+                     currentLink.style.color = link.style.color; //You may put any color you want
+                 }
+                 link.style.color = 'blue';
+                 currentLink = link;
+             }
+       </script>
+  </asp:ContentPlaceHolder>
+
+</head>
+<body style="background-color: #5A5A5A">
+    <form id="Form1" runat="server">
+        <div style="margin-top: 5px">
+            <table align="center" width="1100px" style="background-color: White;">
+                <tr>
+                    <td colspan="2">
+                        <div style="background-color: White">
+                            <!-- For Dynamic Content on Home Page  -->
+                       
+
+                            <div style="width: 99%; height: 140px; border: medium double #0C7BFA;">
+                                <table style="width: 1000px; margin-left:-50px;" align="center" >
+                                    <tr>
+
+                                        <td height="30px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100px">
+                                           
+                                        </td>
+                                      
+                                        <td align="left">
+                                            <asp:ImageButton ID="ImageButton_logo" runat="server" Height="100px" Width="125px"
+                                                ImageUrl="~/Images/Deiontech_Logo.png" PostBackUrl="~/Forms/SuperAdmin/SuperAdmin_Home.aspx"
+                                                CausesValidation="false" />
+                                        </td>
+                                        <td width="50px"></td>
+                                        <td width="500px">
+                                            <table>
+                                                <tr>
+                                                    <td style="font-size: 17px; color: #82191D" >
+                                                        <b>
+                                                            <asp:Label ID="Lbl_TrustName" runat="server" Text="LOGICPRO SOLUTIONS "></asp:Label></b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: Olive" width="500px">
+                                                        <b>
+
+                                                            <asp:Label ID="lbl_CollegeName" runat="server" Text="INNOVATION THROUGH EXCELLENCE"></asp:Label></b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <asp:Label ID="lbl_CollegeAddress" runat="server" Text=""></asp:Label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td >
+                                            <table >
+                                                <tr >
+                                                  
+                                                    <td style="margin-left:200px;">
+                                                       <asp:Label ID="lblWecome" runat="server" Text="Welcome" Font-Size="18px"></asp:Label>
+                                                        &nbsp;&nbsp;
+                                 
+                                                          <asp:Label ID="lblSignas" runat="server" ForeColor="#82191D" Text="LogicPro" Font-Bold="true" Font-Size="11px"></asp:Label>
+                                                        
+                                                    </td>
+                                                    <td style="margin-left:200px;">
+                                                        <asp:ImageButton ID="ibtnSuperAdmin" runat="server" ImageUrl="~/images/superadmin.ico" Height="50px"
+                                                            Style="vertical-align: text-top;" Width="50px" 
+                                                            CausesValidation="false" />
+
+                                                         <asp:Label ID="lblUserName" runat="server" Text="" Font-Bold="True" Font-Italic="False"
+                                                        Font-Names="Calibri" ForeColor="Black" Font-Size="36pt"></asp:Label>
+                                                    </td>
+                                                     <td>
+                                                        <asp:Label ID="lblDate" runat="server" Text="" Font-Italic="true"></asp:Label>
+                                                       <%-- <asp:Label ID="lblBar1" runat="server" Text="  |  "></asp:Label>--%>
+                                                      
+
+                                                   <%--     <i class="fa fa-user" aria-hidden="true"></i>--%>
+                                                        <%--  <asp:Label ID="lblUserType" runat="server" Text="  | "></asp:Label--%>
+                                                    <asp:LinkButton ID="lbtnLogout" Text="Logout" runat="server" CausesValidation="false"
+                                                        OnClick="lbtnLogout_Click"></asp:LinkButton>
+                                                        <asp:Label ID="Label6" runat="server" Text="  |  "></asp:Label>
+                                                        <asp:ImageButton ID="ibtnHome" runat="server" ImageUrl="~/images/Home.png" Height="25px"
+                                                            Style="vertical-align: text-bottom;" Width="25px" PostBackUrl="~/Forms/SuperAdmin/SuperAdmin_Home.aspx"
+                                                            CausesValidation="false" />
+                                                    </td>
+                                                </tr>
+                                               
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <table width="100%" align="right">
+                                <tr>
+                                    <td>
+                                        <!--Menu content-->
+                                        <div id='cssmenu'>
+                                            <ul>
+                                                <li><a href='#'><span>Home</span></a></li>
+                                                <li class='has-sub '><a href='#'><span>Event Gallery</span></a> </li>
+                                                <li><a href='#'><span>Blog</span></a></li>
+                                                <li><a href='#'><span>About us</span></a></li>
+                                                <li><a href='#'><span>Contact</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- End Of Menu-->
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="" style="">
+                            <table>
+                                <%--<tr>--%>
+                                    <td width="150px">
+                                        <div class="" style="height: 900px">
+                                            <div class="span2" align="left">
+                                                <!--Sidebar content-->
+                                             
+                                                <ul class="nav nav-list">
+                                                    <li class="active"><a href="#"><i class="icon-home icon-white"  ></i>Home</a></li>
+                                                    <li><a href="SuperAdmin_AddNewCollege.aspx"><i class="icon-edit" onClick="changeLinkColor(this)"></i>Add School/College</a></li>
+                                                  <li><a href="SuperAdmin_EditCollegeDetails.aspx"><i class="icon-edit"  ></i>Edit School/College</a></li>
+                                                    <%--<li><a href="UploadStudentList.aspx"><i class="icon-edit"  ></i>Upload Student List</a></li>--%>
+                                                    <li><a href="AddAdminTrustee.aspx"><i class="icon-edit"  ></i>Add Admin/Trustee</a></li>
+                                                </ul>
+                                                      
+                                                <ul class="nav nav-list">
+                                                    <li class="active"><a href="#"><i class="icon-home icon-white"></i>Configuration</a></li>
+                                                    <li><a href="University.aspx"><i class="icon-edit"></i>Add University</a></li>
+                                                    
+                                                    <li><a href="CountryStateDistSA.aspx"><i class="icon-edit"></i>Country/State/Dist.</a></li>
+                                                   <%-- <li><a href="../HR/AddStaff.aspx"><i class="icon-edit"></i>Add Staff</a></li>--%>
+                                                    <li><a href="DepartmentDesignationSA.aspx"><i class="icon-edit"></i>Dept/Designation</a></li>
+                                                    <li><a href="CasteCategorySA.aspx"><i class="icon-edit"></i>Add CasteCategory</a></li>
+                                                    <%--  <li><a href="SportMaster.aspx"><i class="icon-edit"></i>Sport Master</a></li>--%>
+                                                    <li><a href="AddTrailset.aspx"><i class="icon-edit"></i>Add Trailset</a></li>
+                                                </ul>
+                                                <%--<ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-home icon-white"></i>Master Settings</a></li>
+                                                <li><a href=""><i class="icon-book"></i>Authority</a></li>
+                                                <li><a href=""><i class=" icon-upload"></i>Manage Users</a></li>
+                                            </ul>--%>
+                                            <%--   <ul class="nav nav-list">
+                                                    <li class="active"><a href="#"><i class="icon-home icon-white"></i>Graphical Reports</a></li>
+                                                    <li><a href="addmissiondetails.aspx"><i class="icon-edit"></i>Admission Report</a></li>
+                                                   <li><a href="InventoryGraphs.aspx"><i class="icon-edit"></i>Inventory Report</a></li>
+                                                   <li><a href="PlacementsGraph.aspx"><i class="icon-edit"></i>Placement Report</a></li>
+
+                                               </ul>--%>
+
+                                                <ul class="nav nav-list">
+                                                    <li class="active"><a href="#"><i class="icon-home icon-white"></i>Other</a></li>
+                                                    <li><a href="ChangePassword.aspx"><i class="icon-book"></i>Reset Password</a></li>
+                                                    <%--<li><a href="../../CMSHome.aspx"><i class="icon-edit"></i>Logout</a></li>--%>
+                                                    <li>
+                                                        <asp:LinkButton ID="lbtnLogout1" runat="server" CausesValidation="false" OnClick="lbtnLogout1_Click"><i class="icon-off"></i>Logout</asp:LinkButton></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <!--Content Place Holder  -->
+                                    <td width="800px;height:900px">
+                                        <div class="span10">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <div style="background: #000000; background-repeat: repeat">
+                                        <table align="center">
+                                            <tr>
+                                                <td align="center" style="font-size: 12px; color: White">All Rights Reserved 2016 @ logicPro Solutions
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="font-size: 12px; color: White">
+                                                Website :<a href="http://logicprosol.com" target="_blank">
+                                               <%-- <a href="http://logicprosol.com" style="color:white">--%> <u>Logic Pro Solutions</u></a>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="font-size: 12px; color: White">E-mail : logicprosol@gmail.com
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="font-size: 12px; color: White">Contact : 8805537777
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

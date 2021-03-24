@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<countries>
+
+	<country name="India">
+
+		<state  value="Maharashtra"></state>
+		<state  value="Madhya Pradesh"></state>
+		<state  value="Andaman and Nicobar Islands"></state>
+		<state  value="Andhra Pradesh"></state>
+		<state  value="Arunachal Pradesh"></state>
+		<state  value="Assam"></state>
+		<state  value="Bihar"></state>
+		<state  value="Chandigarh"></state>
+		<state  value="Chhattisgarh"></state>
+		<state  value="Dadra and Nagar Haveli"></state>
+		<state  value="Daman and Diu"></state>
+		<state  value="Delhi"></state>
+		<state  value="Goa"></state>
+		<state  value="Gujarat"></state>
+		<state  value="Haryana"></state>
+		<state  value="Himachal Pradesh"></state>
+		<state  value="Jammu and Kashmir"></state>
+		<state  value="Jharkhand"></state>
+		<state  value="Karnataka"></state>
+		<state  value="Kerala"></state>
+		<state  value="Lakshadweep"></state>
+
+		<state  value="Manipur"></state>
+		<state  value="Meghalaya"></state>
+		<state  value="Mizoram"></state>
+		<state  value="Nagaland"></state>
+		<state  value="Orissa"></state>
+		<state  value="Pondicherry"></state>
+		<state  value="Punjab"></state>
+		<state  value="Rajasthan"></state>
+		<state  value="Sikkim"></state>
+		<state  value="Tamil Nadu"></state>
+		<state  value="Tripura"></state>
+		<state  value="Uttar Pradesh"></state>
+		<state  value="Uttaranchal"></state>
+		<state  value="West Bengal"></state>
+	</country>
+
+	<country name="Sri Lanka">
+		<state value="Kanady"></state>
+		<state value="Colombo"></state>
+		<state value="Galle"></state>
+	</country>
+
+	<country name="Australia">
+		<state value="Sydney"></state>
+		<state value="Perth"></state>
+		<state value="Melbourne"></state>
+	</country>
+
+	<country name="South Africa">
+		<state value="Capetown"></state>
+		<state value="Johanusburg"></state>
+		<state value="Durban"></state>
+	</country>
+
+	<State name="Maharashtra">
+
+		<City value="Akola"></City>
+		<City value="Amravati"></City>
+		<City value="Buldhana"></City>
+		<City value="Yavatmal"></City>
+		<City value="Washim"></City>
+		<City value="Amravati"></City>
+		<City value="Aurangabad"></City>
+		<City value="Beed"></City>
+		<City value="Hingoli"></City>
+		<City value="Jalna"></City>
+		<City value="Latur"></City>
+		<City value="Nanded"></City>
+		<City value="Osmanabad"></City>
+		<City value="Parbhani"></City>
+		<City value="Aurangabad"></City>
+		<City value="Mumbai"></City>
+		<City value="Thane"></City>
+		<City value="Raigad"></City>
+		<City value="Ratnagiri"></City>
+		<City value="Sindhudurg"></City>
+		<City value="Mumbai"></City>
+		<City value="Bhandara"></City>
+		<City value="Chandrapur"></City>
+		<City value="Gadchiroli"></City>
+		<City value="Gondia"></City>
+		<City value="Nagpur"></City>
+		<City value="Wardha"></City>
+		<City value="Nagpur"></City>
+		<City value="Ahmednagar"></City>
+		<City value="Dhule"></City>
+		<City value="Jalgaon"></City>
+		<City value="Nandurbar"></City>
+		<City value="Nashik"></City>
+		<City value="Nashik"></City>
+		<City value="Kolhapur"></City>
+		<City value="Pune"></City>
+		<City value="Sangli"></City>
+		<City value="Satara"></City>
+		<City value="Solapur"></City>
+	</State>
+
+  <State name="Madhya Pradesh">
+    <City value="No"></City>
+  </State>
+
+  <State name="Andaman and Nicobar Islands">
+    <City value="No"></City>
+  </State>
+
+  <State name="Andhra Pradesh">
+    <City value="No"></City>
+  </State>
+
+  <State name="Arunachal Pradesh">
+    <City value="No"></City>
+  </State>
+
+  <State name="Assam">
+    <City value="No"></City>
+  </State>
+
+</countries>

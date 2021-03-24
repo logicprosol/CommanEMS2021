@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FD7978D-4247-485F-BB96-96C9609B6024}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EntityWebApp</RootNamespace>
+    <AssemblyName>EntityWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\EWA_AddHostelRoom.cs" />
+    <Compile Include="Admin\EWA_AddQuestions.cs" />
+    <Compile Include="Admin\EWA_AddTest.cs" />
+    <Compile Include="Admin\EWA_Challanrecord.cs" />
+    <Compile Include="Admin\EWA_CountryStateDistrict.cs" />
+    <Compile Include="Admin\EWA_Dashbord.cs" />
+    <Compile Include="Admin\EWA_FeesCategory.cs" />
+    <Compile Include="Admin\EWA_Holiday.cs" />
+    <Compile Include="Admin\EWA_LC.cs" />
+    <Compile Include="Admin\EWA_Role.cs" />
+    <Compile Include="Admin\EWA_Scheme.cs" />
+    <Compile Include="Admin\EWA_SendSMS.cs" />
+    <Compile Include="Admin\EWA_TimeSlotMaster.cs" />
+    <Compile Include="Admin\EWA_TimeTableCreation.cs" />
+    <Compile Include="EWA_ChangePassword.cs" />
+    <Compile Include="Faculty\EWA_LeaveApplication.cs" />
+    <Compile Include="Faculty\EWA_UploadResult.cs" />
+    <Compile Include="HR\EWA_ChallanRecAdmin.cs" />
+    <Compile Include="HR\EWA_LeaveStatus.cs" />
+    <Compile Include="HR\EWA_SalarySettings.cs" />
+    <Compile Include="HR\EWA_SetLeave.cs" />
+    <Compile Include="Inventory\EWA_Category.cs" />
+    <Compile Include="Inventory\EWA_Item.cs" />
+    <Compile Include="Inventory\EWA_PurchaseOrder.cs" />
+    <Compile Include="Inventory\EWA_QualityControl.cs" />
+    <Compile Include="Inventory\EWA_StockView.cs" />
+    <Compile Include="Inventory\EWA_Supplier.cs" />
+    <Compile Include="Inventory\EWA_Unit.cs" />
+    <Compile Include="Library\EWA_AddBook.cs" />
+    <Compile Include="Library\EWA_AddBookGroup.cs" />
+    <Compile Include="Library\EWA_IssueBook.cs" />
+    <Compile Include="Library\EWA_ReturnBook.cs" />
+    <Compile Include="Reports\EWA_CommonReports.cs" />
+    <Compile Include="SuperAdmin\EWA_SportMaster.cs" />
+    <Compile Include="Admin\EWA_AcademicYear.cs" />
+    <Compile Include="Admin\EWA_Admission.cs" />
+    <Compile Include="Admin\EWA_BatchAllotment.cs" />
+    <Compile Include="Admin\EWA_CasteCategory.cs" />
+    <Compile Include="Admin\EWA_DeviceSetting.cs" />
+    <Compile Include="Admin\EWA_DownloadAttDeviceData.cs" />
+    <Compile Include="Admin\EWA_Transport.cs" />
+    <Compile Include="Faculty\EWA_UploadDocument.cs" />
+    <Compile Include="HR\EWA_EmpAssignSubject.cs" />
+    <Compile Include="Admin\EWA_AssignDeptDes.cs" />
+    <Compile Include="Admin\EWA_EmpStudAttendance.cs" />
+    <Compile Include="Admin\EWA_LeaveType.cs" />
+    <Compile Include="Admin\EWA_Login.cs" />
+    <Compile Include="Admin\EWA_PayFees.cs" />
+    <Compile Include="Admin\EWA_Semester.cs" />
+    <Compile Include="Admin\EWA_WeekDay.cs" />
+    <Compile Include="Faculty\EWA_ComposeMessage.cs" />
+    <Compile Include="HR\EWA_Staff.cs" />
+    <Compile Include="Admin\EWA_Fees.cs" />
+    <Compile Include="Admin\EWA_StaffView.cs" />
+    <Compile Include="Admin\EWA_Student.cs" />
+    <Compile Include="Admin\EWA_StudentView.cs" />
+    <Compile Include="Admin\EWA_Subject.cs" />
+    <Compile Include="EWA_Common.cs" />
+    <Compile Include="EWA_SendMessage.cs" />
+    <Compile Include="Faculty\EWA_Faculty.cs" />
+    <Compile Include="Faculty\EWA_Leave.cs" />
+    <Compile Include="Faculty\EWA_Messages.cs" />
+    <Compile Include="Admin\EWA_DepartmentDesignation.cs" />
+    <Compile Include="Admin\EWA_Documents.cs" />
+    <Compile Include="Admin\EWA_ProgramExecutive.cs" />
+    <Compile Include="Faculty\EWA_StudentAttendance.cs" />
+    <Compile Include="Student\EWA_StudentProfile.cs" />
+    <Compile Include="SuperAdmin\EWA_SuperAdmin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuperAdmin\EWA_Trailset.cs" />
+    <Compile Include="SuperAdmin\EWA_University.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\Master\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

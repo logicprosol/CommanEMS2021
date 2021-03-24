@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b41dc980-0382-4c0b-9c05-f354638ec314" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://
+                    /AttWebSer/AttedanceApp.AttendanceService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AttedanceApp.disco" MetadataType="Disco" ID="1a4dbb84-f835-4f18-8207-be2e28e681cc" SourceId="1" SourceUrl="http://comp9/AttWebSer/AttedanceApp.AttendanceService.svc?disco" />
+    <MetadataFile FileName="AttendanceService.wsdl" MetadataType="Wsdl" ID="0ae218c6-e518-4bd9-918d-d32c3a3e458f" SourceId="1" SourceUrl="http://comp9/AttWebSer/AttedanceApp.AttendanceService.svc?wsdl" />
+    <MetadataFile FileName="AttedanceApp.xsd" MetadataType="Schema" ID="46fece15-dc57-4ce7-9abc-22591e91830c" SourceId="1" SourceUrl="http://comp9/AttWebSer/AttedanceApp.AttendanceService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AttedanceApp1.xsd" MetadataType="Schema" ID="e2f8238b-a081-44d2-9b97-4be9ed618635" SourceId="1" SourceUrl="http://comp9/AttWebSer/AttedanceApp.AttendanceService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AttedanceApp2.xsd" MetadataType="Schema" ID="4df773a2-12c3-4edb-8b7a-879172c48120" SourceId="1" SourceUrl="http://comp9/AttWebSer/AttedanceApp.AttendanceService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

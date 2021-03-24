@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- A SAMPLE set of Contries,State and Cities
+=============================================
+ Author:		Deepak Sawant
+ Create date: 06/Jan/2014
+ Description:	set of Contries,State and Cities
+ =============================================  -->
+<data>
+  <Country id="1" name="India" />
+  <Country id="2" name="Australia" />
+  <Country id="3" name="USA" />
+
+  <State id="1" name="Maharastra" cid="1" />
+  <State id="2" name="Andaman and Nicobar Islands" cid="1" />
+  <State id="3" name="Andhra Pradesh" cid="1" />
+  <State id="4" name="Arunachal Pradesh" cid="1" />
+  <State id="5" name="Assam" cid="1" />
+  <State id="6" name="Bihar" cid="1" />
+  <State id="7" name="Chandigarh" cid="1" />
+  <State id="8" name="Chhattisgarh" cid="1" />
+  <State id="9" name="Dadra and Nagar Haveli" cid="1" />
+  <State id="10" name="Daman and Diu" cid="1" />
+  <State id="11" name="Delhi" cid="1" />
+  <State id="12" name="Goa" cid="1" />
+  <State id="13" name="Gujarat" cid="1" />
+  <State id="14" name="Haryana" cid="1" />
+  <State id="15" name="Himachal Pradesh" cid="1" />
+  <State id="16" name="Jammu and Kashmir" cid="1" />
+  <State id="17" name="Jharkhand" cid="1" />
+  <State id="18" name="Karnataka" cid="1" />
+  <State id="19" name="Kerala" cid="1" />
+  <State id="20" name="Lakshadweep" cid="1" />
+  <State id="21" name="Manipur" cid="1" />
+  <State id="21" name="Madhya Pradesh" cid="1" />
+  <State id="22" name="Meghalaya" cid="1" />
+  <State id="23" name="Mizoram" cid="1" />
+  <State id="24" name="Nagaland" cid="1" />
+  <State id="25" name="Orissa" cid="1" />
+  <State id="26" name="Pondicherry" cid="1" />
+  <State id="27" name="Punjab" cid="1" />
+  <State id="28" name="Rajasthan" cid="1" />
+  <State id="29" name="Sikkim" cid="1" />
+  <State id="30" name="Tamil Nadu" cid="1" />
+  <State id="31" name="Tripura" cid="1" />
+  <State id="32" name="Uttar Pradesh" cid="1" />
+  <State id="33" name="Uttaranchal" cid="1" />
+  <State id="34" name="West Bengal" cid="1" />
+
+  <State id="35" name="Melbourne" cid="2" />
+  <State id="36" name="New Jersy" cid="3" />
+
+  <City id="1" name="Pune" sid="1" />
+  <City id="2" name="Akola" sid="1" />
+  <City id="3" name="Amravati" sid="1" />
+  <City id="4" name="Ahmednagar" sid="1" />
+  <City id="5" name="Aurangabad" sid="1" />
+  <City id="6" name="Bhandara" sid="1" />
+  <City id="7" name="Beed" sid="1" />
+  <City id="8" name="Buldhana" sid="1" />
+  <City id="9" name="Chandrapur" sid="1" />
+  <City id="10" name="Dhule" sid="1" />
+  <City id="11" name="Gadchiroli" sid="1" />
+  <City id="12" name="Gondia" sid="1" />
+  <City id="13" name="Hingoli" sid="1" />
+  <City id="14" name="Jalgaon" sid="1" />
+  <City id="15" name="Jalna" sid="1" />
+  <City id="16" name="Kolhapur" sid="1" />
+  <City id="17" name="Latur" sid="1" />
+  <City id="18" name="Mumbai" sid="1" />
+  <City id="19" name="Nagpur" sid="1" />
+  <City id="20" name="Nanded" sid="1" />
+  <City id="21" name="Nandurbar" sid="1" />
+  <City id="22" name="Nashik" sid="1" />
+  <City id="23" name="Osmanabad" sid="1" />
+  <City id="24" name="Parbhani" sid="1" />
+  <City id="25" name="Raigad" sid="1" />
+  <City id="26" name="Ratnagiri" sid="1" />
+  <City id="27" name="Sangli" sid="1" />
+  <City id="28" name="Satara" sid="1" />
+  <City id="29" name="Solapur" sid="1" />
+  <City id="30" name="Sindhudurg" sid="1" />
+  <City id="31" name="Thane" sid="1" />
+  <City id="32" name="Wardha" sid="1" />
+  <City id="33" name="Washim" sid="1" />
+  <City id="34" name="Yavatmal" sid="1" />
+
+  <City id="35" name="Kolkata" sid="34" />
+  <City id="36" name="Kharagpur" sid="34" />
+  <City id="37" name="Bhubaneswar" sid="25" />
+  <City id="38" name="Cuttack" sid="25" />
+  <City id="39" name="AusCity1" sid="35" />
+  <City id="40" name="USACity2" sid="36" />
+</data>

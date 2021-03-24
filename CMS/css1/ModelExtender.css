@@ -1,0 +1,27 @@
+﻿
+.GradiantBack
+{
+    padding: 10px;
+    filter: alpha(opacity:50);
+    opacity: 0.9;
+    background-size: 100%;
+    background-color: #FFFFFF;
+}
+
+.modalBackground
+{
+    background-color: Gray;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+.modalPopup
+{
+    background-color: #FFFFFF;
+    border-width: 1px;
+    -moz-border-radius: 5px;
+    border-style: solid;
+    border-color: Gray;
+    min-width: 250px;
+    max-width: 400px;
+}

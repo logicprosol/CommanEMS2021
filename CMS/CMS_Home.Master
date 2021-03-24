@@ -1,0 +1,223 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CMS_Home.master.cs" Inherits="CMS.CMS_Home" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script type = "text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+    <link id="Link1" runat="server" rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon" />
+    <link id="Link2" runat="server" rel="icon" href="~/images/favicon.ico" type="image/ico" />
+    <title>Education Management System </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <style>
+        .abc {
+            font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 26.4px;
+            }
+        .auto-style1 {
+            height: 22px;
+        }
+    </style>
+    <form id="Form1" runat="server">
+    <%--aa--%>
+    <script type="text/javascript">
+        //
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        //Raised before processing of an asynchronous postback starts and the postback request is sent to the server.
+        prm.add_beginRequest(BeginRequestHandler);
+        // Raised after an asynchronous postback is finished and control has been returned to the browser.
+        prm.add_endRequest(EndRequestHandler);
+        function BeginRequestHandler(sender, args) {
+            //Shows the modal popup - the update progress
+            var popup = $find('<%= modalPopup.ClientID %>');
+            if (popup != null) {
+                var postBackElement = args.get_postBackElement();
+                postBackElement.disabled = true;
+                if (postBackElement.defaultValue == 'Delete' || postBackElement.defaultValue == 'Save' || postBackElement.defaultValue == 'Update' || postBackElement.defaultValue == 'Submit') {
+
+                    popup.show();
+                }
+                postBackElement.disabled = false;
+            }
+        }
+
+        function EndRequestHandler(sender, args) {
+            //Hide the modal popup - the update progress
+            var popup = $find('<%= modalPopup.ClientID %>');
+            if (popup != null) {
+                popup.hide();
+            }
+        }
+    </script>
+    <asp:UpdateProgress ID="UpdateProgress" runat="server">
+        <ProgressTemplate>
+            <asp:Image ID="PleaseWaitImage" ImageUrl="~/images/please_wait.gif" AlternateText="Processing"
+                runat="server" Height="42px" Width="121px" />
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+    <asp:ModalPopupExtender ID="modalPopup" runat="server" TargetControlID="UpdateProgress"
+        PopupControlID="UpdateProgress" BackgroundCssClass="modalBackground" />
+    <%--<asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>--%>
+    <div>
+        <table align="center" style="background-color: White;">
+            <tr>
+                <td>
+                    <table width="100%" align="center">
+                        <tr>
+                            <td>
+                                <img src="images/Deiontech_Logo.png" alt="LogicproSolutions" 
+                                    />
+                            </td>
+                            <td>
+                                <strong><h1 style="font-weight:400; font-size:xx-large; color:#82191D; margin-left:-58px;" class="abc">LOGICPRO  SOLUTIONS</h1></strong>
+                            <p><h1 style="font-weight:200; font-size:medium; color:#82191D; margin-left:-20px;" class="abc">INNOVATION THROUGH EXCELLENCE</h1></p>
+                                 </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td style="margin-left:30px;">
+                                            <asp:Button ID="btnAdminLoginModel" class="btn btn-default" runat="server" BackColor="#82191D" ForeColor="White"
+                                                Text="LogicPro Login" OnClick="btnAdminLoginModel_Click" />
+                                            <!-- Button trigger modal -->
+                                            <asp:ModalPopupExtender ID="LoginPopUp" runat="server" TargetControlID="btnAdminLoginModel"
+                                                CancelControlID="btnCancel" PopupControlID="PopupDiv" DropShadow="True">
+                                            </asp:ModalPopupExtender>
+                                            <div id="PopupDiv" style="width: 400px; height: 200px; display: none; padding: 10px;
+                                                background-color: #E1DCF2;">
+                                                <h4 style="background-color: Blue; color: White; font-size: 15px;">
+                                                    LogicPro Login</h4>
+                                                <hr />
+                                                <table style="width: 100%;">
+                                                    <tr>
+                                                        <td>
+                                                            UserName :
+                                                        </td>
+                                                        <td>
+                                                            <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Password :
+                                                        </td>
+                                                        <td>
+                                                            <asp:TextBox ID="TxtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            &nbsp;
+                                                        </td>
+                                                        <td>
+                                                            <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                                                            &nbsp;<asp:Button ID="btnCancel" class="btn btn-primary" runat="server" Text="Cancel" />
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td colspan="2">
+                                                        <asp:Label ID="lblMsg" runat="server" Text="" ForeColor="Red"></asp:Label>
+                                                    </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <!-- /.modal -->
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td align="right">
+                                <!--Menu content-->
+                                <div id='cssmenu'>
+                                    <%--<ul>
+                                        <li><a href='#'><span>Home</span></a></li>
+                                        <li class='has-sub '><a href='#'><span>Software Modules</span></a>
+                                            <ul>
+                                                <li class='has-sub '><a href='#'><span>Main Modules</span></a> </li>
+                                                <li class='has-sub '><a href='#'><span>Primium Modules</span></a> </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href='#'><span>About us</span></a></li>
+                                        <li><a href='#'><span>Contact</span></a></li>
+                                    </ul>--%>
+                                </div>
+                                <!-- End Of Menu-->
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!--   Future contents-->
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div style="background: #000000; background-repeat: repeat">
+                                    <table align="center" width="100%">
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                All Rights Reserved @ logicPro Solutions India Pvt Ltd
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                Website :<a href="http://logicprosol.com" target="_blank">
+                                               <%-- <a href="http://logicprosol.com" style="color:white">--%> <u>LogicPro Solutions India Pvt Ltd</u></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White" class="auto-style1">
+                                                E-mail : Info@logicprosol.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                Contact : 8805537777
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

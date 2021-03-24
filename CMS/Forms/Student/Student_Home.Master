@@ -1,0 +1,227 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student_Home.master.cs"
+    Inherits="CMS.Forms.Student.Student_Home" %>
+
+    <%@ Register Src="~/UserControls/MessageBox.ascx" TagName="MsgBox" TagPrefix="ucMsgBox" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link id="Link1" runat="server" rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon" />
+    <link id="Link2" runat="server" rel="icon" href="~/images/favicon.ico" type="image/ico" />
+    <title>Education Management System </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="../../css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #444e59">
+    <form id="Form1" runat="server">
+    <div style="margin-top: 5px">
+        <table align="center" width="1200px" style="background-color: White;">
+            <tr>
+                <td colspan="2">
+                    <div style="background-color: White">
+                        <!-- For Dynamic Content on Home Page  -->
+                        <div style="width: 1200px; height: 140px; border: medium double #0C7BFA;">
+                            <table style="width: 1200px" align="center">
+                                <tr>
+                                    <td height="30px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10px">
+                                    </td>
+                                    <td width="80px">
+                                        <asp:ImageButton ID="ImageButton_logo" runat="server" Height="100px" Width="125px"
+                                            ImageUrl="~/images/logo-big.png" PostBackUrl="~/Forms/Student/Student_Home.aspx"
+                                            CausesValidation="false" />
+                                    </td>
+                                    <td width="600px" align="left">
+                                        <table>
+                                            <tr>
+                                                <td style="font-size: 12px; color: Olive">
+                                                    <b>
+                                                        <asp:Label ID="Lbl_TrustName" runat="server" Text="LogicPro Solutions"></asp:Label></b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 20px; color: #4000FF" width="500px">
+                                                    <b>
+                                                        <asp:Label ID="lbl_CollegeName" runat="server" Text="LogicPro Solutions"></asp:Label></b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label ID="lbl_CollegeAddress" runat="server" Text="Pimple Gurav ,Pune"></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td align="right">
+                                           <table>
+                                            <tr>
+                                                <td>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="lblWecome" runat="server" Text="Welcome "></asp:Label>
+                                                    &nbsp;&nbsp;
+                                                    <asp:Label ID="lblUserType" runat="server" Text="Student" Font-Bold="True" Font-Italic="False"
+                                                        Font-Names="Calibri" ForeColor="Black" Font-Size="14pt"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                </td>
+                                                <td align="right">
+                                                    <asp:Label ID="lblDate" runat="server" Text="" Font-Italic="true"></asp:Label>
+                                                    <asp:Label ID="lblBar1" runat="server" Text="  |  "></asp:Label>
+                                                    <asp:Label ID="lblSignas" runat="server" Text="Sign in As Student"></asp:Label>
+                                                    <asp:Label ID="Label1" runat="server" Text="  |  "></asp:Label>
+                                                    <asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click" CausesValidation="False">Log Out</asp:LinkButton>
+                                                    <asp:Label ID="Label6" runat="server" Text="  |  "></asp:Label>
+                                                    <asp:ImageButton ID="ibtnHome" runat="server" ImageUrl="~/images/Home.png" Height="25px"
+                                                        Style="vertical-align: text-bottom;" Width="25px" PostBackUrl="~/Forms/Student/Student_Home.aspx"
+                                                        CausesValidation="false" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <table width="100%" align="right">
+                            <tr>
+                                <td>
+                                    <!--Menu content-->
+                                    <div id='cssmenu'>
+                                        <ul>
+                                            <li><a href='#'><span>Home</span></a></li>
+                                            <li class='has-sub '><a href='#'><span>Event Gallary</span></a> </li>
+                                            <li><a href='#'><span>Blog</span></a></li>
+                                            <li><a href='#'><span>About us</span></a></li>
+                                            <li><a href='#'><span>Contact</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- End Of Menu-->
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="" style="">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="" style="height:900px; width: 188px;">
+                                        <div class="span2">
+                                            <!--Sidebar content-->
+                                            <ul class="nav nav-list">
+                                                <li class="active"><a href="Student_Home.aspx"><i class="icon-home icon-white"></i>Student Home</a></li>
+                                                <li><a href="ViewProfile.aspx"><i class="icon-book"></i>View Profile</a></li>
+                                                <li><a href="StudentUpdateProfile.aspx"><i class="icon-edit"></i>Update Profile</a></li>
+                                                <li><a href="ViewAnnouncement.aspx"><i class="icon-edit"></i>View Announcement</a></li>
+                                                <li><a href="Timetable_Student.aspx"><i class="icon-edit"></i>Time Table</a></li>
+                                            </ul>
+                                            <ul class="nav nav-list">
+                                                <li class="active"><a href=""><i class="icon-home icon-white"></i>Student Corner</a></li>
+                                                <%--<li><a href=""><i class="icon-edit"></i>Attendance</a></li>--%>
+                                               <%-- <li><a href="ViewUploadDocument.aspx"><i class="icon-edit"></i>Assignment</a></li>--%>
+                                                <li><a href="ViewFeesDetails.aspx"><i class="icon-edit"></i>Fees</a></li>
+                                                <%--<li><a href=""><i class="icon-edit"></i>Examination</a></li>--%>
+                                                <li><a href="ViewUploadDocument.aspx"><i class="icon-edit"></i>Study Materials</a></li>
+                                                      <li><a href="Start Exam.aspx"><i class="icon-edit"></i>Start Online Exam</a></li>
+                                                <li><a href="Onlineresult.aspx"><i class="icon-edit"></i>Online Exam Result</a></li>
+                                                <li><a href="ViewAnnualResultPDF.aspx"><i class="icon-edit"></i>Exam Result</a></li>
+                                                <%--<li><a href="Result.aspx"><i class="icon-edit"></i>View Result</a></li>
+                                                <li><a href=""><i class="icon-edit"></i>Holidays</a></li>--%>
+                                            </ul>
+
+                                              <ul class="nav nav-list">
+                                                <li class="active"><a href=""><i class="icon-home icon-white"></i>Student Placement</a></li>
+                                                <li><a href="StudentPlacementReg.aspx"><i class="icon-edit"></i>Placement Registration</a></li>
+                                              </ul>
+
+                                            <%--<ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-home icon-white"></i>Hostel</a></li>
+                                                <li><a href=""><i class="icon-book"></i>View Details</a></li>
+                                                <li><a href=""><i class=" icon-upload"></i>View Bills</a></li>
+                                            </ul>--%>
+                                            <%--<ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-home icon-white"></i>Transport</a></li>
+                                                <li><a href="#"><i class="icon-book"></i>View Roots</a></li>
+                                                <li><a href="../../Home.aspx"><i class="icon-edit"></i>All Roots</a></li>
+                                            </ul>--%>
+                                            <%--<ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-home icon-white"></i>Message</a></li>
+                                                <li><a href="#"><i class="icon-book"></i>InBox</a></li>
+                                                <li><a href="../../Home.aspx"><i class="icon-edit"></i>Compose Message</a></li>
+                                                <li><a href="../../Home.aspx"><i class="icon-edit"></i>Sent Message</a></li>
+                                            </ul>--%>
+                                            <ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-home icon-white"></i>Account</a></li>
+                                                <li><a href="ChangePassword.aspx"><i class="icon-book"></i>Reset Password</a></li>
+                                               <li><asp:LinkButton ID="lbtnLogout1" runat="server" CausesValidation="false" OnClick="lbtnLogout1_Click"><i class="icon-off"></i>Logout</asp:LinkButton></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!--Content Place Holder  -->
+                                <td width="900px">
+                                    <div class="span10">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                         <div style="height: 900px; width: 900px; border: double #0C7BFA">
+                                            </div>
+                                            <ucMsgBox:MsgBox ID="msgBox" runat="server" />
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div style="background: #000000; background-repeat: repeat">
+                                    <table align="center">
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                 All Rights Reserved 2016 @ LogicPro Solutions
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td align="center" style="font-size: 12px; color: White">
+                                                Website :<a href="http://logicprosol.com" target="_blank">
+                                               <%-- <a href="http://logicprosol.com" style="color:white">--%> <u style="color: #00FFFF">Logic Pro Solutions</u></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td align="center" style="font-size: 12px; color: White">E-mail : Info@logicprosol.com
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                Contact : 8805537777
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

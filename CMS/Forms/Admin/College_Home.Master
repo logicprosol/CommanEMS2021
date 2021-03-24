@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="College_Home.Master.cs"
+    Inherits="CMS.Collage_Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="gh">
+<head id="Head1" runat="server">
+    <link id="Link1" runat="server" rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon" />
+    <link id="Link2" runat="server" rel="icon" href="~/images/favicon.ico" type="image/ico" />
+    <title>Education Management System </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="../../css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+        <script type ="text/javascript">
+
+            window.onload = window.history.forward(0);
+
+</script>  
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #444e59">
+    <form id="Form1" runat="server">
+    <div style="margin-top: 5px">
+        <table align="center" width="1100px" style="background-color: White;">
+            <tr>
+                <td>
+                    <div style="background-image: none url(../../images/images1.jpg); background-color: White">
+                        <!-- For Dynamic Content on Home Page  -->
+                        <div style="width: 99%; height: 140px; border: medium double #0C7BFA;">
+                            <table style="width: 100%; height: 138px;" align="left">
+                                <tr>
+                                    <td align="left" class="style1" width="125px">
+                                        <asp:ImageButton ID="ImageButton_logo" runat="server" Height="100px" Width="125px"
+                                            ImageUrl="~/Images/ctbora_logo_20130504082803.jpg" PostBackUrl="" CausesValidation="false" />
+                                    </td>
+                                    <td align="left">
+                                        <table>
+                                            <tr>
+                                                <td style="font-size: 12px; color: Olive" align="left">
+                                                    <b>
+                                                        <asp:Label ID="Lbl_TrustName" runat="server" Text="
+                                                            
+                                                            
+                                                             Technology Pvt Ltd"></asp:Label></b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 30px; color: #099ADE" width="700px" align="left">
+                                                    <b style="text-align: left">
+                                                        <asp:Label ID="lbl_CollegeName" runat="server" Text="LogicPro solutions"></asp:Label></b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left">
+                                                    <asp:Label ID="lbl_CollegeAddress" runat="server" Text="Pimple Gurav ,Pune"></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="500px" align="right">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <table width="100%" align="right">
+                            <tr>
+                                <td>
+                                    <!--Menu content-->
+                                    <div id='cssmenu'>
+                                        <%--<ul>
+                                            <li><a href='../../CMSHome.aspx'><span>HomeHome</span></a></li>
+                                            <li class='has-sub '><a href='#'><span>Event Gallery</span></a> </li>
+                                            <li><a href='#'><span>Blog</span></a></li>
+                                            <li><a href='#'><span>About us</span></a></li>
+                                            <li><a href='../ContactUs.aspx'></span>Contact</span></a></li>
+                                        </ul>--%>
+                                    </div>
+                                    <!-- End Of Menu-->
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!--   Future contents-->
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div style="background: #000000; background-repeat: repeat">
+                                    <table align="center">
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                All Rights Reserved 2016 @ LogicPro Solutions India Pvt.ltd
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td align="center" style="font-size: 12px; color: White">
+                                                Website :<a href="http://logicprosol.com" target="_blank">
+                                               <%-- <a href="http://logicprosol.com" style="color:white">--%> <u>LogicPro Solutions India Pvt.ltd</u></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                E-mail : Info@logicprosol.com
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                Contact :8805537777
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

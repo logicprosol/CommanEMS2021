@@ -1,0 +1,213 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ProductKey.master.cs" Inherits="CMS.Forms.Admin.ProductKey1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link id="Link1" runat="server" rel="shortcut icon" href="~/images/favicon.ico" type="image/x-icon" />
+    <link id="Link2" runat="server" rel="icon" href="~/images/favicon.ico" type="image/ico" />
+    <title>Education Management System </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="../../css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function ReportOpen(url) {
+            var win = window.open(url, '_blank', 'menubar=no,width=750,height=750,scrollbars=yes,top=100,left=200');
+            win.focus();
+        }
+    </script>
+    <style type="text/css">
+        .style1
+        {
+            width: 167px;
+        }
+    </style>
+  
+</head>
+<body style="background-color: #444e59">
+    <form id="Form1" runat="server">
+    <div style="margin-top: 5px">
+        <table align="center" width="1100px" style="background-color: White;">
+            <tr>
+                <td colspan="2">
+                    <div style="background-color: White">
+                        <!-- For Dynamic Content on Home Page  -->
+                        <div style="width: 1100px; height: 140px; border: medium double #0C7BFA;">
+                            <table style="width: 1100px" align="center">
+                                <tr>
+                                    <td height="30px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10px">
+                                    </td>
+                                    <td width="80px">
+                                        <asp:ImageButton ID="ImageButton_logo" runat="server" Height="100px" Width="125px"
+                                            ImageUrl="~/Images/ctbora_logo_20130504082803.jpg" PostBackUrl="~/CMSHome.aspx"
+                                            CausesValidation="false" />
+                                    </td>
+                                    <td width="400px" align="left">
+                                        <table style="width: 100%">
+                                            <tr>
+                                                <td style="font-size: 12px; color: Olive" align="center">
+                                                    <b>
+                                                        <asp:Label ID="Lbl_TrustName" runat="server" Text="LogicPro Solutions"></asp:Label></b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size: 20px; color: #1190F2;" align="center">
+                                                    <b>
+                                                        <asp:Label ID="lbl_CollegeName" runat="server" Width="500px" Font-Size="Larger" Text="LogicPro Solutions"></asp:Label></b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <asp:Label ID="lbl_CollegeAddress" runat="server" Text="Pimple Gurav ,Pune"></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table style="width: 90%;" cellspacing="10">
+                                            <tr>
+                                                <td>
+                                                </td>
+                                                <td align="right">
+                                                    <asp:Label ID="lblWelcome" runat="server" Text="Welcome for activation"></asp:Label>
+                                                    &nbsp;&nbsp;
+                                                    <asp:Label ID="lblUserType" runat="server" Text="" Font-Bold="True" Font-Italic="False"
+                                                        Font-Names="Calibri" ForeColor="Black" Font-Size="14pt"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                </td>
+                                                <td align="right">
+                                                    <asp:Label ID="lblDate" runat="server" Text="" Font-Italic="true"></asp:Label>
+                                                    <asp:Label ID="lblBar1" runat="server" Text="  |  "></asp:Label>
+                                                    <asp:Label ID="lblSignas" runat="server" Text="Sign in As Admin"></asp:Label>
+                                                    <asp:Label ID="lblUserName" runat="server" Text="  |  "></asp:Label>
+                                                    <asp:LinkButton ID="lbtnLogout" runat="server"  CausesValidation="False" PostBackUrl="~/CMSHome.aspx">Go to Home</asp:LinkButton>
+                                                    <asp:Label ID="Label6" runat="server" Text="  |  "></asp:Label>
+                                                    <asp:ImageButton ID="ibtnHome" runat="server" ImageUrl="~/images/Home.png" Height="25px"
+                                                        Style="vertical-align: text-bottom;" Width="25px" PostBackUrl="../../CMSHome.aspx"
+                                                        CausesValidation="false" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <table width="100%" align="right">
+                            <tr>
+                                <td>
+                                    <!--Menu content-->
+                                    <div id='cssmenu'>
+                                        <ul>
+                                            <li><a href='#'><span>Home</span></a></li>
+                                            <li class='has-sub '><a href='#'><span>Event Gallery</span></a> </li>
+                                            <li><a href='#'><span>Blog</span></a></li>
+                                            <li><a href='#'><span>About us</span></a></li>
+                                            <li><a href='#'><span>Contact</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- End Of Menu-->
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="min-height: 900px">
+                        <table>
+                            <tr>
+                                <td class="style1">
+                                    <div class="" style="min-height: 900px">
+                                        <div class="span2">
+                                            <!--Sidebar content-->
+                                            <ul class="nav nav-list">
+                                              
+                                                <li><a href="ProductKey.aspx" ><i class="icon-edit"></i>Activate Product</a></li>
+                                             <%--   <li><a href="AdmissionForm3.aspx"><i class="icon-edit"></i>Admission Form</a></li>--%>
+                           
+                                               
+                                            <%--    <li><a href="UploadAttendance.aspx"><i class="icon-edit"></i>Upload Attendance</a></li>
+                                                <li><a href="DeviceSetting.aspx"><i class="icon-edit"></i>Device Settings</a></li>
+                                                <li><a href="GetAttDeveiceData.aspx"><i class="icon-edit"></i>Get Device Attendance</a></li>--%>
+                                               
+                                                <%--  <li><a href=""><i class="icon-edit"></i>View Announcement</a></li>--%>
+                                            </ul>
+
+                                      
+                                            <%--<ul class="nav nav-list">
+                                                <li class="active"><a href="#"><i class="icon-home icon-white"></i>Master Settings</a></li>
+                                                <li><a href=""><i class="icon-book"></i>Authority</a></li>
+                                                <li><a href=""><i class=" icon-upload"></i>Manage Users</a></li>
+                                            </ul>--%>
+                                           
+                                          
+                                        </div>
+                                    </div>
+                                </td>
+                                <!--Content Place Holder  -->
+                                <td valign="top">
+                                    <div class="span10">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            <div style="height: Auto; width: 900px; border: double #0C7BFA">
+                                            </div>
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <div style="background: #000000; background-repeat: repeat">
+                                    <table align="center">
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                All Rights Reserved 2016 @ LogicPro Solutions
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                Website :<a href="http://logicprosol.com" target="_blank">
+                                               <%-- <a href="http://logicprosol.com" style="color:white">--%> <u>Logic Pro Solutions</u></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                E-mail : info@logicprosol.com
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="font-size: 12px; color: White">
+                                                Contact : 8805537777
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
